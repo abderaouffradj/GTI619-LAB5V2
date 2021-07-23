@@ -14,6 +14,8 @@ $resultAffaire = $crud ->getAttendeesAffaire();
         <th>Email </th>
         <th>First name </th>
         <th>Last name </th>
+        <th>Actions </th>
+
     </tr>
     <?php while($r =$resultResidentiel -> fetch(PDO::FETCH_ASSOC)) {?>
         
@@ -21,6 +23,8 @@ $resultAffaire = $crud ->getAttendeesAffaire();
             <td> <?php echo $r['Email']?>  </td> 
             <td>  <?php echo $r['firstname']?> </td> 
             <td>  <?php echo $r['lastname']?> </td> 
+            <td>  <a href = "view.php" class = "btn btn-primary">Modifier</a> </td> 
+
         </tr>
         <?php }?>
     <tr>
@@ -32,6 +36,8 @@ $resultAffaire = $crud ->getAttendeesAffaire();
         <th>Email </th>
         <th>First name </th>
         <th>Last name </th>
+        <th>Actions </th>
+
     </tr>
     <?php while($r =$resultAffaire -> fetch(PDO::FETCH_ASSOC)) {?>
         
@@ -39,6 +45,8 @@ $resultAffaire = $crud ->getAttendeesAffaire();
             <td> <?php echo $r['Email']?>  </td> 
             <td>  <?php echo $r['firstname']?> </td> 
             <td>  <?php echo $r['lastname']?> </td> 
+            <td>  <a href = "view.php" class = "btn btn-primary">Modifier</a> </td> 
+
         </tr>
         <?php }?>
     <tr>
