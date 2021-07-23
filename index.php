@@ -3,7 +3,7 @@ $title = 'GTI 619 Laboratoire 5';
 require_once 'includes/header.php';
 require_once 'database/conn.php';
 
-#$results= $crud -> getSpeclialities();
+#$results= $crud -> getSpeclialities
 
 ?>
 
@@ -34,11 +34,9 @@ require_once 'database/conn.php';
 <div class = "form-group">
     <label for = "speciality"> Domaine </label>
     <select class = "form-control" id= "speciality" name = "speciality">
- 
-    <?php while($r = $results-> fetch(PDO::FETCH_ASSOC)){ ?>
-         <option value = "<?php echo $r['id']?>"><?php echo $r['name'];?></option> 
-     <?php } ?>
-
+        <option value = "3" > Administrateur</option>
+        <option value = "2" > Préposé aux clients résidentiels</option>
+        <option value = "1" > Préposé aux clients d'affaire</option>
 </select>
 </div>     
 

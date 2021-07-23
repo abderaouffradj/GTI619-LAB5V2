@@ -20,23 +20,20 @@ require_once 'database/conn.php';
 }
 ?>
  
- 
-
  <div class = "card" style = "width: 18rem;">
     <div class = "card-body">
         <h5 class= "card-title">
-            <?php echo $_POST['Email']; ?>
+         Nom:   <?php echo $_POST['Nom']; ?>
         </h5>
         <h6 class = "card-substitle mb-2 text-muted">
-        <?php echo $_POST['speciality']; ?>
+         Prenom:    <?php echo $_POST['Prenom']; ?>
         </h6>
         <h6 class = "card-substitle mb-2 text-muted">
-        <?php echo $_POST['Nom']; ?>
+          Email:  <?php echo $_POST['Email']; ?>
         </h6>
         <h6 class = "card-substitle mb-2 text-muted">
-        <?php echo $_POST['Prenom']; ?>
+          Domaine:  <?php echo $_POST['speciality']; ?>
         </h6>
-</div>
 </div>
 <br>
 <br>

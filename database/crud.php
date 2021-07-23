@@ -40,4 +40,13 @@
 
         }
 
+        public function getAttendeeDetails($id){
+            $sql = "SELECT * from `gti619` where `userid` = :id";
+            $statement =$this -> database ->prepare ($sql);
+            $statement-> bindparam(':id',  $id);
+            $statement-> execute();
+            $result = $statement->fetch();
+            return $result;
+      }
+
      }
