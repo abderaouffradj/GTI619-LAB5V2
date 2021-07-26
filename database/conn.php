@@ -21,5 +21,5 @@
     $crud = new crud($pdo);
     $user = new user($pdo);
 
-    $user -> insertUser("admin", "password")
+   # $crud -> insert('administrateur@gmail.com', 'fradj', 'abderaouf', 1, 'password');
 ?>

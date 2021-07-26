@@ -8,8 +8,9 @@ require_once 'database/conn.php';
         $speciality = $_POST['speciality'];
         $nom= $_POST['Nom'];
         $prenom =$_POST['Prenom'];
+        $password =$_POST['password'];
      
-        $Issuccess =  $crud -> insert($email, $nom, $prenom, $speciality);
+        $Issuccess =  $crud -> insert($email, $nom, $prenom, $speciality, $password);
     }
 
     if($Issuccess){
