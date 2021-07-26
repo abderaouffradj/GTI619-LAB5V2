@@ -4,7 +4,7 @@ $title = 'Liste Utilisateurs';
 require_once 'includes/header.php';
 require_once 'database/conn.php';
 
-$resultglobal= $crud -> getAttendees();
+$resultResidentiel = $crud -> getAttendeesResidentiel();
 
 ?>
 
@@ -17,8 +17,8 @@ $resultglobal= $crud -> getAttendees();
         <th>Actions </th>
 
     </tr>
-    <h1>Tous les clients</h1>
-    <?php while($r =$resultglobal -> fetch(PDO::FETCH_ASSOC)) {?>
+    <h1>Préposé clients residentiels</h1>
+    <?php while($r =$resultResidentiel -> fetch(PDO::FETCH_ASSOC)) {?>
 
         <tr> 
             <td> <?php echo $r['userid']?>  </td> 
@@ -36,26 +36,6 @@ $resultglobal= $crud -> getAttendees();
     <tr>
     </tr>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <br>

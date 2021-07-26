@@ -12,12 +12,32 @@
         $new_password = md5($password.$email);
 
         $result = $user->getUser($email,$new_password);
+
+        echo $result['speciality_id'];
+
+
         if(!$result){
             echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
+
         }else{
            $_SESSION['email'] = $email;
            $_SESSION['userid'] = $result['id'];
-          header("Location: viewRecords.php");
+           
+
+           header("Location: viewRecords.php");
+
+          ##     if ($result['speciality_id']=){
+             ##        die();
+           ##     }
+       ##   else if ($result['speciality_id']= 2){
+            ##        header("Location: viewRecordClientsResid.php");
+##die();
+       ## }else if ($result['speciality_id']= 3){
+         ##            header("Location: viewRecordClientsAffaire.php");
+        ##   die();
+        ##  }
+
+
        }
    }
 

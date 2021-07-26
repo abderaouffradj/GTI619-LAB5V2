@@ -32,6 +32,13 @@
                 }
          }
 
+         public function getAttendees(){
+            $sql = "SELECT * FROM `gti619`";
+            $result = $this ->database -> query($sql);
+
+            return $result;
+      }
+
         public function getAttendeesResidentiel(){
               $sql = "SELECT * FROM `gti619`  where `speciality_id` = 1";
               $result = $this ->database -> query($sql);

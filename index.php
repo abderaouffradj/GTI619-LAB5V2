@@ -40,9 +40,9 @@ require_once 'database/conn.php';
 <div class = "form-group">
     <label for = "speciality"> Domaine </label>
     <select class = "form-control" id= "speciality" name = "speciality">
-        <option value = "3" > Administrateur</option>
+        <option value = "1" > Administrateur</option>
         <option value = "2" > Préposé aux clients résidentiels</option>
-        <option value = "1" > Préposé aux clients d'affaire</option>
+        <option value = "3" > Préposé aux clients d'affaire</option>
 </select>
 </div>     
 

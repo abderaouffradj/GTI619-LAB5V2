@@ -4,8 +4,7 @@ $title = 'Liste Utilisateurs';
 require_once 'includes/header.php';
 require_once 'database/conn.php';
 
-$resultglobal= $crud -> getAttendees();
-
+$resultAffaire = $crud ->getAttendeesAffaire();
 ?>
 
 <table class = "table">
@@ -17,17 +16,19 @@ $resultglobal= $crud -> getAttendees();
         <th>Actions </th>
 
     </tr>
-    <h1>Tous les clients</h1>
-    <?php while($r =$resultglobal -> fetch(PDO::FETCH_ASSOC)) {?>
+    <h1>Préposé clients affaires</h1>
+
+    <?php while($r =$resultAffaire -> fetch(PDO::FETCH_ASSOC)) {?>
 
         <tr> 
             <td> <?php echo $r['userid']?>  </td> 
             <td> <?php echo $r['Email']?>  </td> 
             <td>  <?php echo $r['firstname']?> </td> 
             <td>  <?php echo $r['lastname']?> </td> 
-            <td>  <a href = "view.php?id=<?php echo $r['userid']?> " class = "btn btn-primary">Afficher</a>
-            <a href = "edit.php?id=<?php echo $r['userid']?> " class = "btn btn-warning">Modifier</a>
-            <a href = "delete.php?id=<?php echo $r['userid']?> " class = "btn btn-danger">Supprimer</a>
+            <td> 
+                 <a href = "view.php?id=<?php echo $r['userid']?> " class = "btn btn-primary">Afficher</a> 
+                 <a href = "edit.php?id=<?php echo $r['userid']?> " class = "btn btn-warning">Modifier</a>
+                 <a href = "delete.php?id=<?php echo $r['userid']?> " class = "btn btn-danger">Supprimer</a>
 
         </td> 
 
@@ -36,7 +37,6 @@ $resultglobal= $crud -> getAttendees();
     <tr>
     </tr>
 </table>
-
 
 
 
