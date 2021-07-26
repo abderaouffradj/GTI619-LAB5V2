@@ -37,9 +37,9 @@ class user{
 
         public function getUser($email,$password){
             try{
-                $sql = "select * from users where email = :email AND password = :password ";
+                $sql = "select * from `users` where `email` = :email AND `password` = :password";
                 $stmt = $this->database->prepare($sql);
-                $stmt->bindparam(':username', $username);
+                $stmt->bindparam(':email', $email);
                 $stmt->bindparam(':password', $password);
                 $stmt->execute();
                 $result = $stmt->fetch();

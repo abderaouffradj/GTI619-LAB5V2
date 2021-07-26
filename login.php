@@ -5,22 +5,22 @@
     require_once 'database/conn.php'; 
     
     //If data was submitted via a form POST request, then...
-  //  if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    //    $username = strtolower(trim($_POST['username']));
-      //  $password = $_POST['password'];
-        //$new_password = md5($password.$username);
+        $email = strtolower(trim($_POST['email']));
+        $password = $_POST['password'];
+        $new_password = md5($password.$email);
 
-     //   $result = $user->getUser($username,$new_password);
-       // if(!$result){
-       //     echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
-     //   }else{
-      //      $_SESSION['username'] = $username;
-      //      $_SESSION['userid'] = $result['id'];
-       //     header("Location: viewrecords.php");
-      //  }
+        $result = $user->getUser($email,$new_password);
+        if(!$result){
+            echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
+        }else{
+           $_SESSION['email'] = $email;
+           $_SESSION['userid'] = $result['id'];
+          header("Location: viewRecords.php");
+       }
+   }
 
-  //  }
 ?>
 
 <h1 class="text-center"><?php echo $title ?> </h1>
