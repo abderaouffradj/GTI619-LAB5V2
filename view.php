@@ -27,9 +27,7 @@ if(isset($_GET['id'])){
         <h6 class = "card-substitle mb-2 text-muted">
           Email:  <?php echo $result['Email']; ?>
         </h6>
-        <h6 class = "card-substitle mb-2 text-muted">
-          Domaine:  <?php echo $result['speciality_id']; ?>
-        </h6>
+        
 </div>
 <br>
 <br>

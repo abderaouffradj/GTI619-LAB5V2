@@ -31,9 +31,6 @@ require_once 'database/conn.php';
         <h6 class = "card-substitle mb-2 text-muted">
           Email:  <?php echo $_POST['Email']; ?>
         </h6>
-        <h6 class = "card-substitle mb-2 text-muted">
-          Domaine:  <?php echo $_POST['speciality']; ?>
-        </h6>
 </div>
 <br>
 <br>
