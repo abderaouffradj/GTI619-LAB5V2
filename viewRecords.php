@@ -28,6 +28,8 @@ $resultAffaire = $crud ->getAttendeesAffaire();
             <td>  <?php echo $r['lastname']?> </td> 
             <td>  <a href = "view.php?id=<?php echo $r['userid']?> " class = "btn btn-primary">Afficher</a>
             <a href = "edit.php?id=<?php echo $r['userid']?> " class = "btn btn-warning">Modifier</a>
+            <a href = "delete.php?id=<?php echo $r['userid']?> " class = "btn btn-danger">Supprimer</a>
+
         </td> 
 
         </tr>
@@ -57,6 +59,8 @@ $resultAffaire = $crud ->getAttendeesAffaire();
             <td> 
                  <a href = "view.php?id=<?php echo $r['userid']?> " class = "btn btn-primary">Afficher</a> 
                  <a href = "edit.php?id=<?php echo $r['userid']?> " class = "btn btn-warning">Modifier</a>
+                 <a href = "delete.php?id=<?php echo $r['userid']?> " class = "btn btn-danger">Supprimer</a>
+
         </td> 
 
         </tr>

@@ -48,5 +48,7 @@
             $result = $statement->fetch();
             return $result;
       }
+      
+      #Ajouter methode modifier et supprimer 
 
      }
