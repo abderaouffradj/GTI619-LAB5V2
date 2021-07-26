@@ -1,4 +1,9 @@
+<?php
+
+include_once 'database/session.php';?>
 <!doctype html>
+
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -26,6 +31,14 @@
       <a class="nav-item nav-link" href="viewRecords.php">Liste Utilisateurs</a>
     </div>
   </div>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+<div class="navbar-nav">
+
+  <a class="nav-item nav-link auto" href="login.php">Login <span class="sr-only">(current)</span></a>
+  <a class="nav-item nav-link auto" href="logout.php">Logout <span class="sr-only">(current)</span></a>
+
+</div>
+</div>
 </nav>
 
 <div class="container">
